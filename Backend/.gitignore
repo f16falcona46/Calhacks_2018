@@ -1,1 +1,3 @@
 clients.db
+nginx-1.13.4
+!nginx-1.13.4/conf/nginx.conf

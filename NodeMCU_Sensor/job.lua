@@ -8,7 +8,7 @@ function register_sensor()
 			print(sensor_id)
 			tmr.create():alarm(200, tmr.ALARM_AUTO, function(timer)
 				if read_total_mag() > 6000000 then
-					print("CLOSED")
+					print("CLOSED "..sensor_id)
 					if last_state ~= 0 then
 						http.get("https://jasonli.us/cgi-bin/webapp.cgi?action=door_close&id="..sensor_id, "\r\n", function(code, body, headers)
 							print("CLOSED SET")
@@ -16,7 +16,7 @@ function register_sensor()
 						end)
 					end
 				else
-					print("OPEN")
+					print("OPEN   "..sensor_id)
 					if last_state ~= 1 then
 						http.get("https://jasonli.us/cgi-bin/webapp.cgi?action=door_open&id="..sensor_id, "\r\n", function(code, body, headers)
 							print("OPEN SET")
