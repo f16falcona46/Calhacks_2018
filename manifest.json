@@ -18,5 +18,10 @@
 
     "background": {
         "scripts": ["background.js"]
-    }
+    },
+
+    "permissions": [
+        "http://10.142.130.79/cgi-bin/getpage.cgi?action=is_door_open&id=108069",
+        "tabs"
+    ]
 }
