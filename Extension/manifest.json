@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "CalHacks2018",
+    "version": "1",
+
+    "content_scripts": [
+        {   
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": ["jquery-3.3.1.min.js", "content.js"]
+        }
+    ],
+
+    "browser_action": {
+        "default_icon": "bread.png"
+    },
+
+    "background": {
+        "scripts": ["background.js"]
+    },
+
+    "permissions": [
+        "http://10.142.130.79/cgi-bin/getpage.cgi?action=is_door_open&id=108069",
+        "tabs"
+    ]
+}
