@@ -5,15 +5,15 @@
 
     "content_scripts": [
         {   
-            "matches": [
-                "<all_urls>"
-            ],
+            "matches": ["<all_urls>"],
             "js": ["jquery-3.3.1.min.js", "content.js"]
         }
     ],
 
     "browser_action": {
-        "default_icon": "bread.png"
+        "default_icon": "bread.png",
+        "default_title": "icon",
+        "default_popup": "popup.html"
     },
 
     "background": {
@@ -21,7 +21,7 @@
     },
 
     "permissions": [
-        "http://10.142.130.79/cgi-bin/getpage.cgi?action=is_door_open&id=108069",
+        "<all_urls>",
         "tabs"
     ]
 }
