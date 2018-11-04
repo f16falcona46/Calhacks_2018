@@ -1,8 +1,9 @@
 var serverID = "";
+var power = true;
 
 setInterval(function(){
     var id = retreiveID();
-    if (id === "1") {
+    if (id === "1" && power === true) {
         abort();
     }
 }, 100)
@@ -28,15 +29,18 @@ function abort() {
     })
 }
 
-chrome.runtime.onMessage.addListener(
-    function(request) {
-        if (request.message === "updated_ID") {
-            serverID = request.id;
-        }
+chrome.runtime.onMessage.addListener(function(request) {
+    if (request.message === "updated_ID") {
+        serverID = request.id;
     }
-)
-
-
-
-
+    if (request.message === "turnOn") {
+        power = true;
+    }
+    if (request.message === "turnOff") {
+        power = false;
+    }
+    if (request.message === "getStatus") {
+        chrome.runtime.sendMessage({"message": "returnStatus", "power": power, "serverID": serverID});
+    }
+})
 
