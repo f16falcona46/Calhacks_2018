@@ -1,6 +1,6 @@
 # Privacy Guard
 
-You're planning a suprise party for your Comrade^(TM), but he glides in, and
+You're planning a suprise party for your Comrade™, but he glides in, and
 ruins the surprise! Don't let this happen to you! Privacy Guard lets you close
 all your secret Web browser windows with only a phone and a magnet. Simply
 attach a magnet to your door, and attach a phone close to it. Tap Connect on
