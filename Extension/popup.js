@@ -1,9 +1,9 @@
-var serverURL = "";
+var serverID = "";
 
 function updateURL() {
-    serverURL = document.getElementById('url').value;
+    serverID = document.getElementById('id').value;
     document.createTextNode("URL Updated");
-    chrome.runtime.sendMessage({"message": "updated_URL", "url": serverURL});
+    chrome.runtime.sendMessage({"message": "updated_ID", "id": serverID});
 }
 document.getElementById("updateButton").onclick = updateURL;
 
