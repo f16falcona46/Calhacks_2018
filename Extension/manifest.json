@@ -16,6 +16,10 @@
         "default_popup": "popup.html"
     },
 
+    "icons": {
+        "128": "bread.png"
+    },
+
     "background": {
         "scripts": ["background.js"]
     },
